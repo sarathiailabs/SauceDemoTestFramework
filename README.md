@@ -1,8 +1,12 @@
 # SauceDemo Playwright Test Automation Framework
 
+[![GitHub Repository](https://img.shields.io/badge/GitHub-sarathiailabs%2FSauceDemoTestFramework-blue?logo=github)](https://github.com/sarathiailabs/SauceDemoTestFramework.git)
+
 A **production-grade** end-to-end test automation framework for [SauceDemo (Swag Labs)](https://www.saucedemo.com/) built with **Playwright** and **TypeScript**.
 
 This framework demonstrates how a professional QA automation team architects a maintainable, scalable, and CI/CD-ready Playwright framework — not just a collection of test scripts.
+
+> 🔗 **Repository**: [https://github.com/sarathiailabs/SauceDemoTestFramework.git](https://github.com/sarathiailabs/SauceDemoTestFramework.git)
 
 ---
 
