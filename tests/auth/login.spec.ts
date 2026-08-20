@@ -9,8 +9,8 @@
  * Tags: @login @smoke @regression @negative @P0 @P1
  */
 
-import { expect, test } from '../../src/fixtures/test.fixture';
-import { invalidCredentials, users } from '../../src/data/users';
+import { expect, test } from '@fixtures/test.fixture';
+import { invalidCredentials, users } from '@data/users';
 
 test.describe('Authentication — Login', () => {
   test.beforeEach(async ({ loginPage }) => {

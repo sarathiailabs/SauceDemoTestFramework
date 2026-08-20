@@ -10,8 +10,8 @@
  * Tags: @product @regression @P1
  */
 
-import { test, expect } from '../../src/fixtures/test.fixture';
-import { products } from '../../src/data/products';
+import { test, expect } from '@fixtures/test.fixture';
+import { products } from '@data/products';
 
 test.describe('Inventory — Product Details', () => {
   test(

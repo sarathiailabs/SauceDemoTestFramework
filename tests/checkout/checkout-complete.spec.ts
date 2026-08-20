@@ -9,9 +9,9 @@
  * Tags: @checkout @smoke @regression @P0 @critical
  */
 
-import { test, expect } from '../../src/fixtures/test.fixture';
-import { products } from '../../src/data/products';
-import { validCheckoutData } from '../../src/data/checkout';
+import { test, expect } from '@fixtures/test.fixture';
+import { products } from '@data/products';
+import { validCheckoutData } from '@data/checkout';
 
 test.describe('Checkout — Order Completion', () => {
   // Navigate to order confirmation before each test

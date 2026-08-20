@@ -12,8 +12,8 @@
 
 import type { Locator, Page } from '@playwright/test';
 import { expect } from '@playwright/test';
-import type { User } from '../types/index.js';
-import { logger } from '../utils/logger.js';
+import type { User } from '@types-local/index';
+import { logger } from '@utils/logger';
 
 export class LoginPage {
   readonly url = '/';

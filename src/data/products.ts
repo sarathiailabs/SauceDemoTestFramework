@@ -7,7 +7,7 @@
  * Prices are stored as numbers (USD). Use helpers.formatCurrency() to display.
  */
 
-import type { Product } from '../types/index.js';
+import type { Product } from '@types-local/index';
 
 export const products = {
   backpack: {

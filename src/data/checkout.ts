@@ -5,7 +5,7 @@
  * without repetition. Add new data sets for edge-case coverage.
  */
 
-import type { CheckoutData } from '../types/index.js';
+import type { CheckoutData } from '@types-local/index';
 
 /** Valid checkout information — passes all form validation. */
 export const validCheckoutData: CheckoutData = {

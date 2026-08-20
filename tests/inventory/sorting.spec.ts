@@ -12,8 +12,8 @@
  * Tags: @inventory @regression @P2
  */
 
-import { test, expect } from '../../src/fixtures/test.fixture';
-import { isSortedNumbers, isSortedStrings } from '../../src/utils/helpers';
+import { test, expect } from '@fixtures/test.fixture';
+import { isSortedNumbers, isSortedStrings } from '@utils/helpers';
 
 test.describe('Inventory — Product Sorting', () => {
   test(

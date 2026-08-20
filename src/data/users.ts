@@ -7,7 +7,7 @@
  * NOTE: process.env is loaded via dotenv in playwright.config.ts before tests run.
  */
 
-import type { User } from '../types/index.js';
+import type { User } from '@types-local/index';
 
 const PASSWORD = process.env.DEFAULT_PASSWORD ?? 'secret_sauce';
 

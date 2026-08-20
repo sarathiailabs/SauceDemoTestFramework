@@ -10,8 +10,8 @@
  * Tags: @inventory @smoke @regression @P0 @P1
  */
 
-import { expect, test } from '../../src/fixtures/test.fixture';
-import { products } from '../../src/data/products';
+import { expect, test } from '@fixtures/test.fixture';
+import { products } from '@data/products';
 
 test.describe('Inventory — Product Listing', () => {
   test(

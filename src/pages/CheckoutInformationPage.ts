@@ -7,8 +7,8 @@
 
 import type { Locator, Page } from '@playwright/test';
 import { expect } from '@playwright/test';
-import type { CheckoutData } from '../types/index.js';
-import { logger } from '../utils/logger.js';
+import type { CheckoutData } from '@types-local/index';
+import { logger } from '@utils/logger';
 
 export class CheckoutInformationPage {
   readonly url = '/checkout-step-one.html';

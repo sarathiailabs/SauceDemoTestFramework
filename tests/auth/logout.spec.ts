@@ -9,8 +9,8 @@
  * Tags: @login @smoke @regression @P1
  */
 
-import { expect, test } from '../../src/fixtures/test.fixture';
-import { SideMenu } from '../../src/components/SideMenu';
+import { expect, test } from '@fixtures/test.fixture';
+import { SideMenu } from '@components/SideMenu';
 
 test.describe('Authentication — Logout', () => {
   test(

@@ -9,13 +9,9 @@
  * Tags: @checkout @regression @negative @P1
  */
 
-import { test, expect } from '../../src/fixtures/test.fixture';
-import { products } from '../../src/data/products';
-import {
-  checkoutValidationCases,
-  validCheckoutData,
-  allFieldsEmpty,
-} from '../../src/data/checkout';
+import { test, expect } from '@fixtures/test.fixture';
+import { products } from '@data/products';
+import { checkoutValidationCases, validCheckoutData, allFieldsEmpty } from '@data/checkout';
 
 test.describe('Checkout — Information Form', () => {
   // Navigate to checkout information page before each test

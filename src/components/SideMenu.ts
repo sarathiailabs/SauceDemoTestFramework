@@ -6,6 +6,7 @@
  */
 
 import type { Locator, Page } from '@playwright/test';
+import { expect } from '@playwright/test';
 
 export class SideMenu {
   private readonly menuButton: Locator;
@@ -16,9 +17,9 @@ export class SideMenu {
   private readonly aboutLink: Locator;
 
   constructor(private readonly page: Page) {
-    // SauceDemo uses specific IDs for the burger menu buttons
-    this.menuButton = page.locator('#react-burger-menu-btn');
-    this.closeButton = page.locator('#react-burger-cross-btn');
+    // SauceDemo uses react-burger-menu — buttons have accessible names set by the library
+    this.menuButton = page.getByRole('button', { name: 'Open Menu' });
+    this.closeButton = page.getByRole('button', { name: 'Close Menu' });
     this.logoutLink = page.locator('[data-test="logout-sidebar-link"]');
     this.resetLink = page.locator('[data-test="reset-sidebar-link"]');
     this.allItemsLink = page.locator('[data-test="inventory-sidebar-link"]');
@@ -28,13 +29,26 @@ export class SideMenu {
   /**
    * Open the side navigation menu.
    * Idempotent — does nothing if the menu is already open.
+   *
+   * NOTE: react-burger-menu slides via CSS transform, NOT display:none / visibility:hidden.
+   * isVisible() returns true even when the panel is off-screen, so we must use
+   * getBoundingClientRect() to check whether the link is actually within the viewport.
    */
   async open(): Promise<void> {
-    const isAlreadyOpen = await this.logoutLink.isVisible();
-    if (!isAlreadyOpen) {
+    const isOpen = await this.logoutLink.evaluate((el) => {
+      const { top, left, bottom, right } = el.getBoundingClientRect();
+      return (
+        top >= 0 &&
+        left >= 0 &&
+        bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    });
+
+    if (!isOpen) {
       await this.menuButton.click();
-      // Wait for menu to be visible
-      await this.logoutLink.waitFor({ state: 'visible' });
+      // Wait until slide-in animation fully completes before returning
+      await expect(this.logoutLink).toBeInViewport();
     }
   }
 

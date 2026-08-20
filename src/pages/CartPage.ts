@@ -6,10 +6,10 @@
 
 import type { Locator, Page } from '@playwright/test';
 import { expect } from '@playwright/test';
-import { Header } from '../components/Header.js';
-import type { CartItem } from '../types/index.js';
-import { parseCurrency } from '../utils/helpers.js';
-import { logger } from '../utils/logger.js';
+import { Header } from '@components/Header';
+import type { CartItem } from '@types-local/index';
+import { parseCurrency } from '@utils/helpers';
+import { logger } from '@utils/logger';
 
 export class CartPage {
   readonly url = '/cart.html';

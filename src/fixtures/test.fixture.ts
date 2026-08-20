@@ -21,15 +21,15 @@
  */
 
 import { test as base } from '@playwright/test';
-import { users } from '../data/users.js';
-import { CartPage } from '../pages/CartPage.js';
-import { CheckoutCompletePage } from '../pages/CheckoutCompletePage.js';
-import { CheckoutInformationPage } from '../pages/CheckoutInformationPage.js';
-import { CheckoutOverviewPage } from '../pages/CheckoutOverviewPage.js';
-import { InventoryPage } from '../pages/InventoryPage.js';
-import { LoginPage } from '../pages/LoginPage.js';
-import { ProductPage } from '../pages/ProductPage.js';
-import { logger } from '../utils/logger.js';
+import { users } from '@data/users';
+import { CartPage } from '@pages/CartPage';
+import { CheckoutCompletePage } from '@pages/CheckoutCompletePage';
+import { CheckoutInformationPage } from '@pages/CheckoutInformationPage';
+import { CheckoutOverviewPage } from '@pages/CheckoutOverviewPage';
+import { InventoryPage } from '@pages/InventoryPage';
+import { LoginPage } from '@pages/LoginPage';
+import { ProductPage } from '@pages/ProductPage';
+import { logger } from '@utils/logger';
 
 // ── Fixture type definitions ─────────────────────────────────────────────────
 

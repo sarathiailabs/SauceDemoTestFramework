@@ -10,10 +10,10 @@
  * Tags: @smoke @P0 @critical
  */
 
-import { test, expect } from '../../src/fixtures/test.fixture';
-import { users } from '../../src/data/users';
-import { products } from '../../src/data/products';
-import { validCheckoutData } from '../../src/data/checkout';
+import { test, expect } from '@fixtures/test.fixture';
+import { users } from '@data/users';
+import { products } from '@data/products';
+import { validCheckoutData } from '@data/checkout';
 
 test.describe('Smoke Suite — Primary Business Journey', () => {
   test(

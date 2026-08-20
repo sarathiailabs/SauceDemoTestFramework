@@ -6,7 +6,7 @@
 
 import type { Locator, Page } from '@playwright/test';
 import { expect } from '@playwright/test';
-import { logger } from '../utils/logger.js';
+import { logger } from '@utils/logger';
 
 export class CheckoutCompletePage {
   readonly url = '/checkout-complete.html';
